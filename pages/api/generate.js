@@ -3,10 +3,10 @@ export default async function handler(req, res) {
 
   const prompt = `Generate a list of 10 creative Web3 brand names based on the keyword: "${keyword}". Include styles like ENS (.eth), DAOs, token tickers ($XYZ), zk, memes, and wordplay. Respond with ONLY the list of names, one per line, no explanation.`;
 
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+  const response = await fetch('https://openrouter.ai', {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer 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', 
+      'Authorization': 'Bearer ec', 
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
